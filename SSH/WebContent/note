@@ -1,0 +1,15 @@
+jquery笔记
+实现tab选项卡功能的jquery代码:
+$(function){
+
+	$("ul li").each(function(i){		
+		$(this).click(function(){
+			$(this).addClass("selected").
+			siblings().removeClass("selected");
+			var index=$(this).index();
+			var $div_box=$(".tab_box_div").eq(index);
+			$div_box.show().siblings().hide();
+		})
+	})
+}
+//实现图片的放大提示效果
